@@ -1,6 +1,7 @@
 import User from "../models/User.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
+import sendEmail from "../utilities/email.js";
 
 const SALT_ROUNDS = 10;
 
@@ -23,6 +24,7 @@ export const register = async (req, res) => {
     });
 
     // call email function
+    sendEmail(token);
 
     res.send({ success: true });
   } catch (error) {
@@ -48,6 +50,30 @@ export const login = async (req, res) => {
     res.send({ success: true, user: user });
   } catch (error) {
     console.log("Login error", error.message);
+
+    res.send({ success: false, error: error.message });
+  }
+};
+
+export const emailConfirm = async (req, res) => {
+  try {
+    console.log("🚀 ~ hello emailConfirm ", req.body);
+
+    const token = req.body.token;
+
+    const decoded = jwt.verify(token, process.env.SECRET);
+    console.log("🚀 ~ emailConfirm ~ decoded", decoded);
+
+    const user = await User.findByIdAndUpdate(
+      { _id: decoded.id },
+      { verified: true },
+      { new: true }
+    );
+    console.log("🚀 ~ emailConfirm ~ user", user);
+
+    res.send({ success: true });
+  } catch (error) {
+    console.log("🚀 ~ emailConfirm ~ error", error.message);
 
     res.send({ success: false, error: error.message });
   }

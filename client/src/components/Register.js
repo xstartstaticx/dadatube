@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { AppContext } from "./Context";
 import axios from "axios";
 
 import { CssVarsProvider, useColorScheme } from "@mui/joy/styles";
@@ -14,6 +15,7 @@ import Link from "@mui/joy/Link";
 function ModeToggle() {
   const { mode, setMode } = useColorScheme();
   const [mounted, setMounted] = useState(false);
+  const { setBackground, background } = useContext(AppContext);
 
   // necessary for server-side rendering
   // because mode is undefined on the server
@@ -29,6 +31,7 @@ function ModeToggle() {
       variant="outlined"
       onClick={() => {
         setMode(mode === "light" ? "dark" : "light");
+        setBackground(!background);
       }}
     >
       {mode === "light" ? "Turn dark" : "Turn light"}
@@ -42,6 +45,8 @@ const Register = () => {
     email: "",
     password: "",
   });
+
+  const { dispatch, background } = useContext(AppContext);
 
   const navigate = useNavigate();
 
@@ -64,13 +69,17 @@ const Register = () => {
 
   return (
     <CssVarsProvider>
-      <main>
+      <main
+        className={`border-2 w-screen h-screen  ${
+          background ? "bg-white" : "bg-black"
+        }`}
+      >
         <ModeToggle />
         <Sheet
           sx={{
             width: 300,
             mx: "auto", // margin left & right
-            my: 4, // margin top & botom
+            my: 4, // margin top & bottom
             py: 3, // padding top & bottom
             px: 2, // padding left & right
             display: "flex",

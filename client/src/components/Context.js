@@ -1,4 +1,4 @@
-import { createContext, useReducer } from "react";
+import { createContext, useReducer, useState } from "react";
 
 export const AppContext = createContext();
 
@@ -16,12 +16,14 @@ export default function ContextProvider({ children }) {
     }
   };
 
+  const [background, setBackground] = useState(false);
+
   const [state, dispatch] = useReducer(reducer, {
     user: {},
   });
 
   return (
-    <AppContext.Provider value={{ state, dispatch }}>
+    <AppContext.Provider value={{ state, dispatch, background, setBackground }}>
       {children}
     </AppContext.Provider>
   );
