@@ -1,6 +1,5 @@
-import { useContext, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { AppContext } from "./Context";
 import axios from "axios";
 
 import { CssVarsProvider, useColorScheme } from "@mui/joy/styles";
@@ -37,29 +36,29 @@ function ModeToggle() {
   );
 }
 
-const Login = () => {
-  const { dispatch } = useContext(AppContext);
-
-  const navigate = useNavigate();
-
+const Register = () => {
   const [data, setData] = useState({
-    emailOrUsername: "",
+    username: "",
+    email: "",
     password: "",
   });
 
-  console.log("data state in login: ", data);
+  const navigate = useNavigate();
 
-  const handleLogin = async () => {
-    const response = await axios.post("/users/login", data);
-    console.log("handleLogin response:", response);
+  const handleRegister = async () => {
+    try {
+      const response = await axios.post("/users/register", data);
+      console.log("handleRegister ~ response:", response);
 
-    if (response.data.success) {
-      dispatch({
-        type: "login",
-        payload: response.data.user,
-      });
-
-      navigate("/dashboard");
+      if (response.data.success) {
+        navigate("/");
+      }
+      //   else {
+      //     if (response.data.errorId === 2)
+      //       alert("Username must be more than 2 characters");
+      //   }
+    } catch (error) {
+      console.log("error:", error.message);
     }
   };
 
@@ -86,23 +85,34 @@ const Login = () => {
             <Typography level="h4" component="h1">
               <b>Welcome!</b>
             </Typography>
-            <Typography level="body2">Sign in to continue.</Typography>
+            <Typography level="body2">
+              Please register a new account.
+            </Typography>
           </div>
           <FormControl>
-            <FormLabel>Who are you?</FormLabel>
+            <FormLabel>Create a unique username:</FormLabel>
+            <Input
+              // html input attribute
+              name="username"
+              type="text"
+              placeholder="enter your username"
+              value={data.username}
+              onChange={(e) => setData({ ...data, username: e.target.value })}
+            />
+          </FormControl>
+          <FormControl>
+            <FormLabel>What's your email?</FormLabel>
             <Input
               // html input attribute
               name="email"
               type="email"
-              placeholder="enter your email or username"
-              value={data.emailOrUsername}
-              onChange={(e) =>
-                setData({ ...data, emailOrUsername: e.target.value })
-              }
+              placeholder="enter your email"
+              value={data.email}
+              onChange={(e) => setData({ ...data, email: e.target.value })}
             />
           </FormControl>
           <FormControl>
-            <FormLabel>Are you authorized to be here?</FormLabel>
+            <FormLabel>Create a good password:</FormLabel>
             <Input
               // html input attribute
               name="password"
@@ -115,17 +125,17 @@ const Login = () => {
 
           <Button
             type="submit"
-            onClick={handleLogin}
+            onClick={handleRegister}
             sx={{ mt: 1 /* margin top */ }}
           >
-            Log in
+            Sign me up!
           </Button>
           <Typography
-            endDecorator={<Link href="/register">Sign up</Link>}
+            endDecorator={<Link href="/">Login</Link>}
             fontSize="sm"
             sx={{ alignSelf: "center" }}
           >
-            Don&apos;t have an account?
+            Have an account already?
           </Typography>
         </Sheet>
       </main>
@@ -133,4 +143,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;
