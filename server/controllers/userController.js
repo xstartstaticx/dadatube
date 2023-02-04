@@ -34,7 +34,7 @@ export const register = async (req, res) => {
 
 export const login = async (req, res) => {
   try {
-    console.log("hello from login controller", req.body);
+    console.log("hello from login controller:", req.body);
 
     const user = await User.findOne({
       $or: [
@@ -43,7 +43,7 @@ export const login = async (req, res) => {
       ],
     }).select("-__v");
 
-    console.log("login user", user);
+    console.log("login controller user:", user);
 
     res.send({ success: true, user: user });
   } catch (error) {
