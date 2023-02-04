@@ -14,8 +14,8 @@ export default async function main(token) {
 
   // send mail with defined transport object
   let info = await transporter.sendMail({
-    from: '"Fred Foo 👻" <daniel.reiller@gmail.com>', // sender address
-    to: "xstartstaticx@gmail.com", // list of receivers
+    from: '"Fred Foo 👻" <daniel.reiller@icloud.com>', // sender address
+    to: ["xstartstaticx@gmail.com", "alandiko84@gmail.com"], // list of receivers
     subject: "Hello ✔", // Subject line
     text: "Hello world this is plain text?", // plain text body
     html: `<b>Welcome to our social app</b>

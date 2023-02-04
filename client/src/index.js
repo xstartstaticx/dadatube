@@ -2,13 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ContextProvider from "./components/Context";
+import LoginLayout from "./layouts/LoginLayout";
 import Login from "./components/Login";
 import Register from "./components/Register";
-
-import LoginLayout from "./layouts/LoginLayout";
 import UserLayout from "./layouts/UserLayout";
-import ContextProvider from "./components/Context";
 import Dashboard from "./components/Dashboard";
+import EmailConfirm from "./components/EmailConfirm";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -18,6 +18,7 @@ root.render(
         <Route element={<LoginLayout />}>
           <Route path="/" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/emailconfirm/:token" element={<EmailConfirm />} />
         </Route>
         <Route element={<UserLayout />}>
           <Route path="/dashboard" element={<Dashboard />} />
