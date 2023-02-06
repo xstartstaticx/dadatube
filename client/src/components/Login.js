@@ -20,7 +20,7 @@ function ModeToggle() {
   // because mode is undefined on the server
   useEffect(() => {
     setMounted(true);
-    setBackground(false);
+    // setBackground(false);
   }, []);
   if (!mounted) {
     return null;
