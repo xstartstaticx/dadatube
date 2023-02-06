@@ -14,8 +14,9 @@ import Link from "@mui/joy/Link";
 
 function ModeToggle() {
   const { mode, setMode } = useColorScheme();
-  const [mounted, setMounted] = useState(false);
-  const { setBackground, background } = useContext(AppContext);
+  // const [mounted, setMounted] = useState(false);
+  const { setBackground, background, mounted, setMounted } =
+    useContext(AppContext);
 
   // necessary for server-side rendering
   // because mode is undefined on the server
