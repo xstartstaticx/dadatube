@@ -17,13 +17,23 @@ export default function ContextProvider({ children }) {
   };
 
   const [background, setBackground] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   const [state, dispatch] = useReducer(reducer, {
     user: {},
   });
 
   return (
-    <AppContext.Provider value={{ state, dispatch, background, setBackground }}>
+    <AppContext.Provider
+      value={{
+        state,
+        dispatch,
+        background,
+        setBackground,
+        mounted,
+        setMounted,
+      }}
+    >
       {children}
     </AppContext.Provider>
   );
