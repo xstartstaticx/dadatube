@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/xstartstaticx/dadatube#readme",
   "dependencies": {
+    "@material-ui/core": "^4.12.4",
     "bcrypt": "^5.1.0",
     "concurrently": "^7.6.0",
     "cookie-parser": "^1.4.6",
