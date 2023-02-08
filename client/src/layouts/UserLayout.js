@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 function UserLayout() {
   const { state } = useContext(AppContext);
 
-  if (state.user._id) {
+  // if (state.user._id) {
   return (
     <>
       <Header/>
@@ -16,17 +16,12 @@ function UserLayout() {
       <Footer />
     </>
   );
-<<<<<<< HEAD
+
     } else {
       return <Navigate to="/" />;
     }
-=======
-  //   } else {
-  //     return <Navigate to="/" />;
-  //   }
 
->>>>>>> be6fd359583df61e5022272e8d51840c14031078
-}
-// }
+
+
 
 export default UserLayout;

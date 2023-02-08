@@ -1,7 +1,5 @@
 import {FaHome} from 'react-icons/fa'
 import {CgProfile} from 'react-icons/cg'
-// import Avatar from '@mui/material/Avatar';
-// import Stack from '@mui/material/Stack';
 import {FiLogOut} from 'react-icons/fi'
 import {Link, useNavigate} from 'react-router-dom'
 import { useContext } from 'react'
@@ -32,7 +30,7 @@ function Header() {
     }
 
     return ( 
-        <div className='bg-teal-500 text-white 
+        <div className='bg-black-500 text-gray-100 
             w-full h-[100px] flex justify-center 
             items-center gap-[20px] text-[2rem]  cursor-pointer'>
             <Link to='/dashboard'><FaHome className='hover:text-slate-600'/> </Link>
