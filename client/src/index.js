@@ -27,7 +27,7 @@ root.render(
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/videos" element={<Videos />} />
           <Route path="/addvideo" element={<AddVideo />} />
-          <Route path="/videos/:title" element={<PlayVideo />} />
+          <Route path="/videos/:id" element={<PlayVideo />} />
         </Route>
       </Routes>
     </BrowserRouter>
