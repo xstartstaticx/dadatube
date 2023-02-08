@@ -12,12 +12,15 @@ function UserLayout() {
     <>
       {/* <Header/> */}
       <Outlet />
+
       <Footer />
     </>
   );
   //   } else {
   //     return <Navigate to="/" />;
   //   }
+
 }
+// }
 
 export default UserLayout;
