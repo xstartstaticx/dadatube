@@ -1,7 +1,7 @@
 import React from "react";
-import Box from "@mui/material/Box";
+// import Box from "@mui/material/Box";
 import BoxCat from "./BoxCat";
-import Paper from "@material-ui/core/Paper";
+// import Paper from "@material-ui/core/Paper";
 
 const Dashboard = () => {
   return (
