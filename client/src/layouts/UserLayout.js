@@ -2,6 +2,7 @@
 import { Navigate, Outlet } from "react-router-dom";
 import { useContext } from "react";
 import { AppContext } from "../components/Context";
+import Footer from "../components/Footer";
 
 function UserLayout() {
   const { state } = useContext(AppContext);
@@ -11,10 +12,14 @@ function UserLayout() {
     <>
       {/* <Header/> */}
       <Outlet />
+
+      <Footer />
     </>
   );
-  // } else {
-  // return <Navigate to="/" />;
+  //   } else {
+  //     return <Navigate to="/" />;
+  //   }
+
 }
 // }
 
