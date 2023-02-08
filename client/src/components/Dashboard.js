@@ -15,21 +15,19 @@ const Dashboard = () => {
       }}
     >
       <div style={{ display: "flex", justifyContent: "space-between" }}>
-<<<<<<< HEAD
         <BoxCat text='Comedy' />
         <BoxCat text='Drama' />
       </div>
       <div style={{ display: "flex", justifyContent: "space-between" }}>
         <BoxCat text='Horror' />
         <BoxCat text='Cartoons' />
-=======
-        <BoxCat text="Comedy" backgroundColor="#ffeda1" />
-        <BoxCat text="Drama" backgroundColor="#70c6db" />
+
+        <BoxCat text='Comedy' backgroundColor='#ffeda1' />
+        <BoxCat text='Drama' backgroundColor='#70c6db' />
       </div>
       <div style={{ display: "flex", justifyContent: "space-between" }}>
-        <BoxCat text="Horror" backgroundColor="#70bbb1" />
-        <BoxCat text="Cartoons" backgroundColor="#ed6f8f" />
->>>>>>> 707d271edfcda44a162099a7cc1f102fc26923d5
+        <BoxCat text='Horror' backgroundColor='#70bbb1' />
+        <BoxCat text='Cartoons' backgroundColor='#ed6f8f' />
       </div>
     </div>
   );

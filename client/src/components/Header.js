@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AppContext } from "./Context";
 import axios from "axios";
+// import {SearchBar} from  "./SearchBar"
 // import { baseUrl } from '../config/baseUrl'
 
 function Header() {
@@ -27,10 +28,11 @@ function Header() {
   };
 
   return (
-    <div className='bg-black text-white 
+    <div className='bg-[#ffeda1] opacity-60 text-white 
     w-full h-[100px] flex justify-center 
     items-center gap-[20px] text-[2rem]  cursor-pointer'>
     <Link to='/dashboard'><FaHome className='hover:text-slate-600'/> </Link>
+    {/* <SearchBar /> */}
     <Link to='/profile'><CgProfile className='hover:text-slate-600'/> </Link>
     <FiLogOut className='hover:text-slate-600 cursor-pointer' onClick={handleLogout}/>
     <img className='w-[50px] h-[50px] object-cover rounded-full' src={state.user.image}/>
