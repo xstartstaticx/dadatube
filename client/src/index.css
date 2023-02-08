@@ -12,6 +12,10 @@ code {
     monospace;
 } */
 
+body {
+  background-color: rgb(246, 239, 231);
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
