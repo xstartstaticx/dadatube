@@ -12,34 +12,6 @@ import Input from "@mui/joy/Input";
 import Button from "@mui/joy/Button";
 import Link from "@mui/joy/Link";
 
-function ModeToggle() {
-  const { mode, setMode } = useColorScheme();
-  // const [mounted, setMounted] = useState(false);
-  const { setBackground, background, mounted, setMounted } =
-    useContext(AppContext);
-  // necessary for server-side rendering
-  // because mode is undefined on the server
-  useEffect(() => {
-    setMounted(true);
-    //setBackground(false);
-  }, []);
-  if (!mounted) {
-    return null;
-  }
-
-  return (
-    <Button
-      variant="outlined"
-      onClick={() => {
-        setMode(mode === "light" ? "dark" : "light");
-        setBackground(!background);
-      }}
-    >
-      {mode === "light" ? "Turn dark" : "Turn light"}
-    </Button>
-  );
-}
-
 const Login = () => {
   const { dispatch, background } = useContext(AppContext);
   const navigate = useNavigate();
@@ -68,19 +40,19 @@ const Login = () => {
   return (
     <CssVarsProvider>
       <main
-        className={`border-2 w-screen h-screen  ${
-          background ? "bg-white" : "bg-black"
-        }`}
-        // style={{
-        //   border: "1px solid red",
-        //   width: "100vw",
-        //   height: "100vh",
-        //   backgroundColor: "black",
-        // }}
+        // className={`border-2 w-screen h-screen  ${
+        //   background ? "bg-white" : "bg-black"
+        // }`}
+        style={{
+          border: "1px solid red",
+          width: "100vw",
+          height: "100vh",
+          backgroundColor: "#202D33",
+        }}
       >
-        <ModeToggle />
         <Sheet
           sx={{
+            background: "red",
             width: 300,
             mx: "auto", // margin left & right
             my: 4, // margin top & bottom

@@ -28,7 +28,7 @@ const Videos = () => {
   };
 
   return (
-    <div className="flex flex-wrap gap-5 justify-center align-center max-w-[900px] m-auto">
+    <div className="flex flex-wrap gap-5 justify-center align-center max-w-[900px] m-auto mb-40">
       {state.videos.map((item) => (
         <div
           key={item._id}
