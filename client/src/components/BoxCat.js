@@ -25,7 +25,7 @@ import Box from "@mui/material/Box";
 //   );
 // };
 
-export default function BoxCat({ text }) {
+export default function BoxCat({ text, backgroundColor }) {
   return (
     <Box
       sx={{
@@ -36,7 +36,7 @@ export default function BoxCat({ text }) {
         borderRadius: "20px",
         width: 445,
         height: 200,
-        backgroundColor: "black",
+        backgroundColor: "#202D33",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -45,7 +45,7 @@ export default function BoxCat({ text }) {
         // fontSize: "5px",
         "&:hover": {
           color: "black",
-          backgroundColor: " rgb(246, 239, 231)",
+          backgroundColor: backgroundColor,
           opacity: [0.9, 0.8, 0.7],
           transform: "scale(1.1)",
         },
