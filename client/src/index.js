@@ -9,6 +9,8 @@ import Register from "./components/Register";
 import UserLayout from "./layouts/UserLayout";
 import Dashboard from "./components/Dashboard";
 import EmailConfirm from "./components/EmailConfirm";
+import Videos from "./components/Videos";
+import AddMovie from "./components/AddMovie";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -22,6 +24,8 @@ root.render(
         </Route>
         <Route element={<UserLayout />}>
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/videos" element={<Videos />} />
+          <Route path="/addmovie" element={<AddMovie />} />
         </Route>
       </Routes>
     </BrowserRouter>
