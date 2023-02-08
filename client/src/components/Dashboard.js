@@ -15,12 +15,12 @@ const Dashboard = () => {
       }}
     >
       <div style={{ display: "flex", justifyContent: "space-between" }}>
-        <BoxCat text="Comedy" />
-        <BoxCat text="Drama" />
+        <BoxCat text='Comedy' />
+        <BoxCat text='Drama' />
       </div>
       <div style={{ display: "flex", justifyContent: "space-between" }}>
-        <BoxCat text="Horror" />
-        <BoxCat text="Cartoons" />
+        <BoxCat text='Horror' />
+        <BoxCat text='Cartoons' />
       </div>
     </div>
   );
