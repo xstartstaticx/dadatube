@@ -41,10 +41,11 @@ export default function BoxCat({ text }) {
         alignItems: "center",
         justifyContent: "center",
         textAlign: "center",
+
         // fontSize: "5px",
         "&:hover": {
           color: "black",
-          backgroundColor: "white",
+          backgroundColor: " rgb(246, 239, 231)",
           opacity: [0.9, 0.8, 0.7],
           transform: "scale(1.1)",
         },
