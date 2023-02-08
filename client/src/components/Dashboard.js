@@ -1,7 +1,7 @@
 import React from "react";
-import Box from "@mui/material/Box";
+// import Box from "@mui/material/Box";
 import BoxCat from "./BoxCat";
-import Paper from "@material-ui/core/Paper";
+// import Paper from "@material-ui/core/Paper";
 
 const Dashboard = () => {
   return (
@@ -15,12 +15,12 @@ const Dashboard = () => {
       }}
     >
       <div style={{ display: "flex", justifyContent: "space-between" }}>
-        <BoxCat text="Comedy" />
-        <BoxCat text="Drama" />
+        <BoxCat text="Comedy" backgroundColor="#ffeda1" />
+        <BoxCat text="Drama" backgroundColor="#70c6db" />
       </div>
       <div style={{ display: "flex", justifyContent: "space-between" }}>
-        <BoxCat text="Horror" />
-        <BoxCat text="Cartoons" />
+        <BoxCat text="Horror" backgroundColor="#70bbb1" />
+        <BoxCat text="Cartoons" backgroundColor="#ed6f8f" />
       </div>
     </div>
   );
