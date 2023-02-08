@@ -11,6 +11,18 @@ export default function ContextProvider({ children }) {
           user: { ...action.payload },
         };
 
+      case "getVideos":
+        return {
+          ...state,
+          videos: [...action.payload],
+        };
+
+      case "videoSaved":
+        return {
+          ...state,
+          videos: [...state.videos, action.payload],
+        };
+
       default:
         return state;
     }
@@ -21,6 +33,7 @@ export default function ContextProvider({ children }) {
 
   const [state, dispatch] = useReducer(reducer, {
     user: {},
+    videos: [],
   });
 
   return (

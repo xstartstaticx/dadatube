@@ -1,5 +1,7 @@
 import {FaHome} from 'react-icons/fa'
 import {CgProfile} from 'react-icons/cg'
+// import Avatar from '@mui/material/Avatar';
+// import Stack from '@mui/material/Stack';
 import {FiLogOut} from 'react-icons/fi'
 import {Link, useNavigate} from 'react-router-dom'
 import { useContext } from 'react'

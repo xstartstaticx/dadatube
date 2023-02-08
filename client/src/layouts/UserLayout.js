@@ -12,12 +12,21 @@ function UserLayout() {
     <>
       <Header/>
       <Outlet />
+
       <Footer />
     </>
   );
+<<<<<<< HEAD
     } else {
       return <Navigate to="/" />;
     }
+=======
+  //   } else {
+  //     return <Navigate to="/" />;
+  //   }
+
+>>>>>>> be6fd359583df61e5022272e8d51840c14031078
 }
+// }
 
 export default UserLayout;
