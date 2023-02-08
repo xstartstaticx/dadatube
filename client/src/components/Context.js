@@ -22,6 +22,11 @@ export default function ContextProvider({ children }) {
           ...state,
           videos: [...state.videos, action.payload],
         };
+      case "loadVideos":
+        return {
+          ...state,
+          videos: [...state.videos, ...action.payload],
+        };
 
       default:
         return state;

@@ -25,7 +25,7 @@ const VintageButton = ({ text, onClick }) => {
       className={classes.vintageButton}
       onClick={onClick}
     >
-      {text}
+      text
     </Button>
   );
 };
