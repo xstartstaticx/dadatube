@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AppContext } from "./Context";
 import axios from "axios";
-import Search from "./Search";
+// import Search from "./Search";
 // import { baseUrl } from '../config/baseUrl'
 import images from "../images/1.png";
 
@@ -43,7 +43,7 @@ function Header() {
           <FaHome className='hover:text-slate-600' />{" "}
         </Link>
 
-        <Search />
+        {/* <Search /> */}
 
         <Link to='/profile'>
           <CgProfile className='hover:text-slate-600' />{" "}

@@ -44,7 +44,7 @@ const Register = () => {
 
   return (
     <CssVarsProvider>
-      <Header />
+      {/* <Header /> */}
       <main
         // className={`border-2 w-screen h-screen  ${
         //   background ? "bg-white" : "bg-black"
@@ -68,7 +68,7 @@ const Register = () => {
             gap: 2,
             borderRadius: "sm",
             boxShadow: "md",
-            backgroundColor: "#70C6DB"
+            backgroundColor: "#70C6DB",
           }}
           variant='outlined'
         >

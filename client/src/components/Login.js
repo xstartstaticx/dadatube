@@ -40,7 +40,7 @@ const Login = () => {
   console.log(background);
   return (
     <CssVarsProvider>
-      <Header />
+      {/* <Header /> */}
       <main
         // className={`border-2 w-screen h-screen  ${
         //   background ? "bg-white" : "bg-black"
@@ -52,7 +52,7 @@ const Login = () => {
           backgroundColor: "#202D33",
         }}
       >
-         <Sheet
+        <Sheet
           sx={{
             width: 600,
             mx: "auto", // margin left & right
@@ -69,18 +69,18 @@ const Login = () => {
           variant='outlined'
         >
           <div>
-            <Typography level="h4" component="h1">
+            <Typography level='h4' component='h1'>
               <b>Welcome!</b>
             </Typography>
-            <Typography level="body2">Sign in to continue.</Typography>
+            <Typography level='body2'>Sign in to continue.</Typography>
           </div>
           <FormControl>
             <FormLabel>Who are you?</FormLabel>
             <Input
               // html input attribute
-              name="email"
-              type="email"
-              placeholder="enter your email or username"
+              name='email'
+              type='email'
+              placeholder='enter your email or username'
               value={data.emailOrUsername}
               onChange={(e) =>
                 setData({ ...data, emailOrUsername: e.target.value })
@@ -91,24 +91,24 @@ const Login = () => {
             <FormLabel>Are you authorized to be here?</FormLabel>
             <Input
               // html input attribute
-              name="password"
-              type="password"
-              placeholder="enter your password"
+              name='password'
+              type='password'
+              placeholder='enter your password'
               value={data.password}
               onChange={(e) => setData({ ...data, password: e.target.value })}
             />
           </FormControl>
 
           <Button
-            type="submit"
+            type='submit'
             onClick={handleLogin}
             sx={{ mt: 1 /* margin top */ }}
           >
             Log in
           </Button>
           <Typography
-            endDecorator={<Link href="/register">Sign up</Link>}
-            fontSize="sm"
+            endDecorator={<Link href='/register'>Sign up</Link>}
+            fontSize='sm'
             sx={{ alignSelf: "center" }}
           >
             Don&apos;t have an account?
