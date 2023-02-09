@@ -1,10 +1,15 @@
-import React from "react";
-// import Box from "@mui/material/Box";
+import React, { useState } from "react";
 import BoxCat from "./BoxCat";
-// import Paper from "@material-ui/core/Paper";
-import VintageButton from "./VintageButton";
+import { Link } from "react-router-dom";
 
 const Dashboard = () => {
+  const [category, setCategory] = useState("");
+
+  const handleCategory = (e) => {
+    setCategory(() => e.target.value);
+    console.log(category);
+  };
+
   return (
     <div
       style={{
@@ -16,16 +21,45 @@ const Dashboard = () => {
       }}
     >
       <div style={{ display: "flex", justifyContent: "space-between" }}>
-        <BoxCat text="Comedy" backgroundColor="#ffeda1" />
-        <BoxCat text="Drama" backgroundColor="#70c6db" />
-        {/* <VintageButton /> */}
+        <Link to="/videoscategory/comedy">
+          <BoxCat
+            text="Comedy"
+            value="comedy"
+            backgroundColor="#ffeda1"
+            onClick={handleCategory}
+          />
+        </Link>
+        <Link to="/videoscategory/drama">
+          <BoxCat
+            text="Drama"
+            value="drama"
+            backgroundColor="#70c6db"
+            onClick={handleCategory}
+          />
+        </Link>
       </div>
 
       <div style={{ display: "flex", justifyContent: "space-between" }}>
-        <BoxCat text="Horror" backgroundColor="#70bbb1" />
-        <BoxCat text="Cartoons" backgroundColor="#ed6f8f" />
+        <Link to="/videoscategory/horror">
+          <BoxCat
+            text="Horror"
+            value="horror"
+            backgroundColor="#70bbb1"
+            onClick={handleCategory}
+          />
+        </Link>
+        <Link to="/videoscategory/cartoon">
+          <BoxCat
+            text="Cartoons"
+            value="cartoon"
+            backgroundColor="#ed6f8f"
+            onClick={handleCategory}
+          />
+        </Link>
       </div>
-      <button>Load more</button>
+      <Link to="/videos">
+        <button>All Movies</button>
+      </Link>
     </div>
   );
 };

@@ -12,6 +12,7 @@ export default function ContextProvider({ children }) {
         };
 
       case "getVideos":
+        console.log(action);
         return {
           ...state,
           videos: [...action.payload],
