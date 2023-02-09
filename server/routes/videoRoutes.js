@@ -1,5 +1,10 @@
 import express from "express";
-import { list, add } from "../controllers/videoController.js";
+import {
+  list,
+  add,
+  findOne,
+  categorylist,
+} from "../controllers/videoController.js";
 import auth from "../middlewares/auth.js";
 
 import multer from "multer";
@@ -41,5 +46,7 @@ const router = express.Router();
 
 router.post("/add", multerMiddleware.single("image"), add);
 router.get("/list", list);
+router.get("/findone", findOne);
+router.get("/categorylist", categorylist);
 
 export default router;

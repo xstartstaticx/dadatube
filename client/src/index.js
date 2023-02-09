@@ -12,6 +12,7 @@ import EmailConfirm from "./components/EmailConfirm";
 import Videos from "./components/Videos";
 import AddVideo from "./components/AddVideo";
 import PlayVideo from "./components/PlayVideo";
+import VideosCategory from "./components/VideosCategory";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -28,6 +29,10 @@ root.render(
           <Route path="/videos" element={<Videos />} />
           <Route path="/addvideo" element={<AddVideo />} />
           <Route path="/videos/:id" element={<PlayVideo />} />
+          <Route
+            path="/videoscategory/:category"
+            element={<VideosCategory />}
+          />
         </Route>
       </Routes>
     </BrowserRouter>
