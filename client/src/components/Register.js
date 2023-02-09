@@ -50,7 +50,7 @@ const Register = () => {
         //   background ? "bg-white" : "bg-black"
         // }`}
         style={{
-          border: "1px solid",
+          border: "1px solid #202D33",
           width: "100vw",
           height: "100vh",
           backgroundColor: "#202D33",
@@ -68,7 +68,7 @@ const Register = () => {
             gap: 2,
             borderRadius: "sm",
             boxShadow: "md",
-            backgroundColor: "#ffeda1"
+            backgroundColor: "#70C6DB"
           }}
           variant='outlined'
         >

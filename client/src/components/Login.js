@@ -46,27 +46,27 @@ const Login = () => {
         //   background ? "bg-white" : "bg-black"
         // }`}
         style={{
-          border: "1px solid red",
+          border: "1px solid #202D33",
           width: "100vw",
           height: "100vh",
           backgroundColor: "#202D33",
         }}
       >
-        <Sheet
+         <Sheet
           sx={{
-            background: "red",
-            width: 300,
+            width: 600,
             mx: "auto", // margin left & right
-            my: 4, // margin top & bottom
-            py: 3, // padding top & bottom
-            px: 2, // padding left & right
+            my: 20, // margin top & bottom
+            py: 6, // padding top & bottom
+            px: 6, // padding left & right
             display: "flex",
             flexDirection: "column",
             gap: 2,
             borderRadius: "sm",
             boxShadow: "md",
+            backgroundColor: "#70BBB1",
           }}
-          variant="outlined"
+          variant='outlined'
         >
           <div>
             <Typography level="h4" component="h1">

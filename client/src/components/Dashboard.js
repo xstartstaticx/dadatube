@@ -16,20 +16,6 @@ const Dashboard = () => {
       }}
     >
       <div style={{ display: "flex", justifyContent: "space-between" }}>
-<<<<<<< HEAD
-        <BoxCat text='Comedy' />
-        <BoxCat text='Drama' />
-=======
-        <BoxCat text="Comedy" backgroundColor="#ffeda1" />
-        <BoxCat text="Drama" backgroundColor="#70c6db" />
-        {/* <VintageButton /> */}
->>>>>>> 8ed142a6a17d77479e669ccfc751007c4c08c821
-      </div>
-
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
-        <BoxCat text='Horror' />
-        <BoxCat text='Cartoons' />
-
         <BoxCat text='Comedy' backgroundColor='#ffeda1' />
         <BoxCat text='Drama' backgroundColor='#70c6db' />
       </div>
