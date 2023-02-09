@@ -12,7 +12,6 @@ import Input from "@mui/joy/Input";
 import Button from "@mui/joy/Button";
 import Link from "@mui/joy/Link";
 import Header from "./Header";
-import { color } from "@mui/system";
 
 const Register = () => {
   const [data, setData] = useState({
@@ -44,7 +43,7 @@ const Register = () => {
 
   return (
     <CssVarsProvider>
-      {/* <Header /> */}
+      <Header />
       <main
         // className={`border-2 w-screen h-screen  ${
         //   background ? "bg-white" : "bg-black"
@@ -56,7 +55,7 @@ const Register = () => {
           backgroundColor: "#202D33",
         }}
       >
-        <Sheet
+         <Sheet
           sx={{
             width: 600,
             mx: "auto", // margin left & right
@@ -68,7 +67,7 @@ const Register = () => {
             gap: 2,
             borderRadius: "sm",
             boxShadow: "md",
-            backgroundColor: "#70C6DB",
+            backgroundColor: "#70BBB1",
           }}
           variant='outlined'
         >
