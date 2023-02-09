@@ -7,6 +7,7 @@ import { AppContext } from "./Context";
 import axios from "axios";
 // import {SearchBar} from  "./SearchBar"
 // import { baseUrl } from '../config/baseUrl'
+import images from "../images/1.png"
 
 function Header() {
   const navigate = useNavigate();
@@ -28,17 +29,28 @@ function Header() {
   };
 
   return (
-    <div className='bg-[#ffeda1] opacity-60 text-white 
+    <div
+    className='bg-[#ed6f8f] text-[#ffeda1]
     w-full h-[100px] flex justify-center 
-    items-center gap-[20px] text-[2rem]  cursor-pointer'>
-    <Link to='/dashboard'><FaHome className='hover:text-slate-600'/> </Link>
-    {/* <SearchBar /> */}
-    <Link to='/profile'><CgProfile className='hover:text-slate-600'/> </Link>
-    <FiLogOut className='hover:text-slate-600 cursor-pointer' onClick={handleLogout}/>
-    <img className='w-[50px] h-[50px] object-cover rounded-full' src={state.user.image}/>
-
-
-</div>
+    items-center gap-[20px] text-[2rem]  cursor-pointer'
+    >
+    <img
+      className='h-8 w-auto sm:h-10'
+      src={images}
+      alt='logo'
+    />
+      <Link to='/dashboard'>
+        <FaHome className='hover:text-slate-600' />{" "}
+      </Link>
+      {/* <SearchBar /> */}
+      <Link to='/profile'>
+        <CgProfile className='hover:text-slate-600' />{" "}
+      </Link>
+      <FiLogOut
+        className='hover:text-slate-600 cursor-pointer'
+        onClick={handleLogout}
+      />
+    </div>
   );
 }
 

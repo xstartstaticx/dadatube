@@ -11,6 +11,8 @@ import FormLabel from "@mui/joy/FormLabel";
 import Input from "@mui/joy/Input";
 import Button from "@mui/joy/Button";
 import Link from "@mui/joy/Link";
+import Header from "./Header";
+import { color } from "@mui/system";
 
 const Register = () => {
   const [data, setData] = useState({
@@ -42,12 +44,13 @@ const Register = () => {
 
   return (
     <CssVarsProvider>
+      <Header />
       <main
         // className={`border-2 w-screen h-screen  ${
         //   background ? "bg-white" : "bg-black"
         // }`}
         style={{
-          border: "1px solid red",
+          border: "1px solid",
           width: "100vw",
           height: "100vh",
           backgroundColor: "#202D33",
@@ -55,24 +58,25 @@ const Register = () => {
       >
         <Sheet
           sx={{
-            width: 300,
+            width: 600,
             mx: "auto", // margin left & right
-            my: 4, // margin top & bottom
-            py: 3, // padding top & bottom
-            px: 2, // padding left & right
+            my: 20, // margin top & bottom
+            py: 6, // padding top & bottom
+            px: 6, // padding left & right
             display: "flex",
             flexDirection: "column",
             gap: 2,
             borderRadius: "sm",
             boxShadow: "md",
+            backgroundColor: "#ffeda1"
           }}
-          variant="outlined"
+          variant='outlined'
         >
           <div>
-            <Typography level="h4" component="h1">
+            <Typography level='h4' component='h1'>
               <b>Welcome!</b>
             </Typography>
-            <Typography level="body2">
+            <Typography level='body2'>
               Please register a new account.
             </Typography>
           </div>
@@ -80,9 +84,9 @@ const Register = () => {
             <FormLabel>Create a unique username:</FormLabel>
             <Input
               // html input attribute
-              name="username"
-              type="text"
-              placeholder="enter your username"
+              name='username'
+              type='text'
+              placeholder='enter your username'
               value={data.username}
               onChange={(e) => setData({ ...data, username: e.target.value })}
             />
@@ -91,9 +95,9 @@ const Register = () => {
             <FormLabel>What's your email?</FormLabel>
             <Input
               // html input attribute
-              name="email"
-              type="email"
-              placeholder="enter your email"
+              name='email'
+              type='email'
+              placeholder='enter your email'
               value={data.email}
               onChange={(e) => setData({ ...data, email: e.target.value })}
             />
@@ -102,24 +106,24 @@ const Register = () => {
             <FormLabel>Create a good password:</FormLabel>
             <Input
               // html input attribute
-              name="password"
-              type="password"
-              placeholder="enter your password"
+              name='password'
+              type='password'
+              placeholder='enter your password'
               value={data.password}
               onChange={(e) => setData({ ...data, password: e.target.value })}
             />
           </FormControl>
 
           <Button
-            type="submit"
+            type='submit'
             onClick={handleRegister}
             sx={{ mt: 1 /* margin top */ }}
           >
             Sign me up!
           </Button>
           <Typography
-            endDecorator={<Link href="/">Login</Link>}
-            fontSize="sm"
+            endDecorator={<Link href='/'>Login</Link>}
+            fontSize='sm'
             sx={{ alignSelf: "center" }}
           >
             Have an account already?

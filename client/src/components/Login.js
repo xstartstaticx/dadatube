@@ -11,6 +11,7 @@ import FormLabel from "@mui/joy/FormLabel";
 import Input from "@mui/joy/Input";
 import Button from "@mui/joy/Button";
 import Link from "@mui/joy/Link";
+import Header from "./Header";
 
 const Login = () => {
   const { dispatch, background } = useContext(AppContext);
@@ -39,6 +40,7 @@ const Login = () => {
   console.log(background);
   return (
     <CssVarsProvider>
+      <Header />
       <main
         // className={`border-2 w-screen h-screen  ${
         //   background ? "bg-white" : "bg-black"
