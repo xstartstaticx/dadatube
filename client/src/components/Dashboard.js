@@ -14,51 +14,55 @@ const Dashboard = () => {
     <div
       style={{
         display: "flex",
-        flexDirection: "column",
-        width: "80%",
+        justifyContent: "center",
+        flexWrap: "wrap",
+        // flexDirection: "column",
+        maWwidth: "1000px",
         margin: "auto auto",
         alignItems: "center",
       }}
     >
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
-        <Link to="/videoscategory/comedy">
-          <BoxCat
-            text="Comedy"
-            value="comedy"
-            backgroundColor="#ffeda1"
-            onClick={handleCategory}
-          />
-        </Link>
-        <Link to="/videoscategory/drama">
-          <BoxCat
-            text="Drama"
-            value="drama"
-            backgroundColor="#70c6db"
-            onClick={handleCategory}
-          />
-        </Link>
-      </div>
+      <Link to="/videoscategory/comedy">
+        <BoxCat
+          text="Comedy"
+          value="comedy"
+          backgroundColor="#ffeda1"
+          onClick={handleCategory}
+        />
+      </Link>
+      <Link to="/videoscategory/drama">
+        <BoxCat
+          text="Drama"
+          value="drama"
+          backgroundColor="#70c6db"
+          onClick={handleCategory}
+        />
+      </Link>
 
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
-        <Link to="/videoscategory/horror">
-          <BoxCat
-            text="Horror"
-            value="horror"
-            backgroundColor="#70bbb1"
-            onClick={handleCategory}
-          />
-        </Link>
-        <Link to="/videoscategory/cartoon">
-          <BoxCat
-            text="Cartoons"
-            value="cartoon"
-            backgroundColor="#ed6f8f"
-            onClick={handleCategory}
-          />
-        </Link>
-      </div>
+      <Link to="/videoscategory/horror">
+        <BoxCat
+          text="Horror"
+          value="horror"
+          backgroundColor="#70bbb1"
+          onClick={handleCategory}
+        />
+      </Link>
+      <Link to="/videoscategory/cartoon">
+        <BoxCat
+          text="Cartoons"
+          value="cartoon"
+          backgroundColor="#ed6f8f"
+          onClick={handleCategory}
+        />
+      </Link>
+
       <Link to="/videos">
-        <button>All Movies</button>
+        <BoxCat
+          text="All Movies"
+          value="videos"
+          backgroundColor="#ed6f8f"
+          onClick={handleCategory}
+        />
       </Link>
     </div>
   );
