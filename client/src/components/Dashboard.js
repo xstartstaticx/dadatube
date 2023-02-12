@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import BoxCat from "./BoxCat";
 import { Link } from "react-router-dom";
+import { fontSize } from "@mui/system";
 
 const Dashboard = () => {
   const [category, setCategory] = useState("");
@@ -20,7 +21,33 @@ const Dashboard = () => {
         alignItems: "center",
       }}
     >
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
+      <div style={{ position: "absolute", marginTop: "2rem" }}>
+        <h1
+          style={{
+            fontSize: "3rem",
+            position: "relative",
+            textAlign: "center",
+          }}
+        >
+          Welcome to DADATUBE library
+        </h1>
+        <h3
+          style={{
+            fontSize: "1rem",
+            position: "relative",
+            textAlign: "center",
+          }}
+        >
+          What do you feel like watching today?
+        </h3>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          marginTop: "6rem",
+        }}
+      >
         <Link to="/videoscategory/comedy">
           <BoxCat
             text="Comedy"
@@ -57,9 +84,7 @@ const Dashboard = () => {
           />
         </Link>
       </div>
-      <Link to="/videos">
-        <button>All Movies</button>
-      </Link>
+      <Link to="/videos">{<button>All Movies</button>}</Link>
     </div>
   );
 };
