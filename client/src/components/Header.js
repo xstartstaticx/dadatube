@@ -82,12 +82,15 @@ function Header() {
     items-center gap-[20px] text-[2rem]  cursor-pointer"
     >
       <div className="bg-[#202D33] flex justify-center w-[250px]">
-        <img
-          className="object-cover h-[100px] w-[200px]"
-          src={images}
-          alt="logo"
-        />
+        <Link to="/dashboard">
+          <img
+            className="object-cover h-[100px] w-[200px]"
+            src={images}
+            alt="logo"
+          />{" "}
+        </Link>
       </div>
+
       <div className="flex gap-20 px-4">
         <Link to="/dashboard">
           <FaHome className="hover:text-slate-600" />{" "}
@@ -96,10 +99,12 @@ function Header() {
         <Link to="/profile">
           <CgProfile className="hover:text-slate-600" />{" "}
         </Link>
-        <FiLogOut
-          className="hover:text-slate-600 cursor-pointer"
-          onClick={handleLogout}
-        />
+        <Link to="/">
+          <FiLogOut
+            className="hover:text-slate-600 cursor-pointer"
+            onClick={handleLogout}
+          />
+        </Link>
       </div>
     </div>
   );

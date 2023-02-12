@@ -12,20 +12,11 @@ const Dashboard = () => {
   };
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        width: "80%",
-        margin: "auto auto",
-        alignItems: "center",
-      }}
-    >
-      <div style={{ position: "absolute", marginTop: "2rem" }}>
+    <>
+      <div style={{ marginTop: "2rem", marginBottom: "2rem" }}>
         <h1
           style={{
             fontSize: "3rem",
-            position: "relative",
             textAlign: "center",
           }}
         >
@@ -34,18 +25,23 @@ const Dashboard = () => {
         <h3
           style={{
             fontSize: "1rem",
-            position: "relative",
             textAlign: "center",
           }}
         >
           What do you feel like watching today?
         </h3>
       </div>
+
       <div
         style={{
           display: "flex",
-          justifyContent: "space-between",
-          marginTop: "6rem",
+          justifyContent: "center",
+          flexWrap: "wrap",
+          // flexDirection: "column",
+          maxWidth: "1000px",
+          margin: "2rem auto",
+          alignItems: "center",
+          gap: "30px",
         }}
       >
         <Link to="/videoscategory/comedy">
@@ -64,9 +60,7 @@ const Dashboard = () => {
             onClick={handleCategory}
           />
         </Link>
-      </div>
 
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
         <Link to="/videoscategory/horror">
           <BoxCat
             text="Horror"
@@ -83,9 +77,17 @@ const Dashboard = () => {
             onClick={handleCategory}
           />
         </Link>
+
+        <Link to="/videos">
+          <BoxCat
+            text="All Movies"
+            value="videos"
+            backgroundColor="#ed6f8f"
+            onClick={handleCategory}
+          />
+        </Link>
       </div>
-      <Link to="/videos">{<button>All Movies</button>}</Link>
-    </div>
+    </>
   );
 };
 
