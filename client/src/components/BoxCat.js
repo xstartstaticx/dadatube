@@ -41,7 +41,6 @@ export default function BoxCat({ text, backgroundColor }) {
         alignItems: "center",
         justifyContent: "center",
         textAlign: "center",
-
         // fontSize: "5px",
         "&:hover": {
           color: "black",
