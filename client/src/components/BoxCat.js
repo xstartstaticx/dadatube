@@ -32,7 +32,7 @@ export default function BoxCat({ text, backgroundColor }) {
         color: "white",
         border: "2px solid black",
         transition: "0.3s",
-        margin: "80px",
+        margin: "10px",
         borderRadius: "20px",
         width: 445,
         height: 200,
