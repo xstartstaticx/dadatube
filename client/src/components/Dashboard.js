@@ -28,7 +28,7 @@ const Dashboard = () => {
             textAlign: "center",
           }}
         >
-          What do you feel like watching today?
+          ↓ ↓ コレクション ↓ ↓
         </h3>
       </div>
 
